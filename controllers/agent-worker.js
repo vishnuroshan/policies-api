@@ -14,7 +14,7 @@ const metadata = async (data) =>
 const worker = async ({ path, type }) => {
 	const data = await fileParser.toJson(path, type);
 	await metadata(data);
-	parentPort.postMessage({ data });
+	parentPort.postMessage('agent');
 };
 
 worker(workerData);
