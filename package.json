@@ -1,0 +1,27 @@
+{
+	"name": "policy-api",
+	"version": "1.0.0",
+	"description": "",
+	"main": "threads.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "nodemon server.js"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"bluebird": "^3.7.2",
+		"body-parser": "^1.19.0",
+		"celebrate": "^12.0.1",
+		"csvtojson": "^2.0.10",
+		"express": "^4.17.1",
+		"formidable": "^1.2.2",
+		"mongodb": "^3.5.5",
+		"mongoose": "^5.9.7",
+		"morgan": "^1.10.0",
+		"xlsx": "^0.15.6"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.2"
+	}
+}
