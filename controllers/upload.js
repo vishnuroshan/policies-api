@@ -6,7 +6,7 @@ ex.insertData = ({ path, type }) => {
 	return new Promise((resolve, reject) => {
 		const options = { workerData: { path, type } }
 		let count = 0;
-		const totalWorkers = 4;
+		const totalWorkers = 2;
 		const onMessage = (val) => {
 			++count;
 			if (count >= totalWorkers) return resolve(val);
@@ -32,6 +32,10 @@ ex.insertData = ({ path, type }) => {
 		worker4.on('message', onMessage);
 		worker4.on('error', onError);
 		worker4.on('exit', onExit);
+		const worker5 = new Worker(`${__dirname}/policy-worker.js`, options);
+		worker5.on('message', onMessage);
+		worker5.on('error', onError);
+		worker5.on('exit', onExit);
 	});
 
 }

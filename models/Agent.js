@@ -9,6 +9,8 @@ const agentSchema = new Schema({
 	}
 }, { timestamps: true });
 
+agentSchema.index({ 'agent': 1 });
+
 const Agent = mongoose.model('agent', agentSchema);
 
 module.exports = Agent;

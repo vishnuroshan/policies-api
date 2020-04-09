@@ -9,6 +9,8 @@ const accountSchema = new Schema({
 	}
 }, { timestamps: true });
 
+accountSchema.index({ 'account_name': 1 });
+
 const Account = mongoose.model('account', accountSchema);
 
 module.exports = Account;

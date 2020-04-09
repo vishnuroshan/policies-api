@@ -9,6 +9,8 @@ const policyCategorySchema = new Schema({
 	}
 }, { timestamps: true });
 
-const Carrier = mongoose.model('policyCategory', policyCategorySchema);
+policyCategorySchema.index({ 'category_name': 1 })
 
-module.exports = Carrier;
+const PolicyCategory = mongoose.model('policyCategory', policyCategorySchema);
+
+module.exports = PolicyCategory;

@@ -9,6 +9,7 @@ const carrierSchema = new Schema({
 	}
 }, { timestamps: true });
 
+carrierSchema.index({ 'company_name': 1 }, { unique: true });
 const Carrier = mongoose.model('carrier', carrierSchema);
 
 module.exports = Carrier;

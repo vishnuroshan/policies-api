@@ -31,6 +31,8 @@ const policySchema = new Schema({
 	timestamps: true
 });
 
+policySchema.index({ 'policy_number': 1, 'user_id': 1, 'company_id': 1 });
+
 const Policy = mongoose.model('policy', policySchema);
 
 module.exports = Policy;
