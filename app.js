@@ -32,6 +32,7 @@ app.use(morgan('common'));
 app.use('/upload/', routes.upload);
 app.use('/policies/', routes.policies);
 app.use('/search/', routes.search);
+app.use('/schedule/', routes.schedule);
 
 
 module.exports = app;

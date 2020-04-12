@@ -1,5 +1,5 @@
 const policies = require('./policies');
 const search = require('./search');
 const upload = require('./upload');
-
-module.exports = { policies, search, upload };
+const schedule = require('./schedule');
+module.exports = { policies, search, upload, schedule };
