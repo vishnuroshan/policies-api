@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require('express');
+const path = require('path');
 const app = express();
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
@@ -27,7 +28,7 @@ const formParser = (request, response, next) => {
 };
 app.use(formParser, bodyParser.json());
 app.use(morgan('common'));
-
+app.use('/apidoc', express.static(path.join(__dirname, 'docs')));
 // public routes
 app.use('/upload/', routes.upload);
 app.use('/policies/', routes.policies);

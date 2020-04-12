@@ -2,6 +2,12 @@
 	"name": "policy-api",
 	"version": "1.0.0",
 	"description": "",
+	"apidoc": {
+		"name": "policies",
+		"version": "0.1.0",
+		"description": "policies api docs",
+		"title": "Policies"
+	},
 	"main": "threads.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
