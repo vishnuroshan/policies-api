@@ -1,0 +1,8 @@
+{
+	// Comments are supported
+	"uid": "app",
+	"append": true,
+	"watch": false,
+	"script": "server.js",
+	"sourceDir": "/home/lord-vader/Desktop/policies-api"
+}
