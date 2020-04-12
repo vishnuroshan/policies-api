@@ -5,6 +5,8 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const routes = require('./routes');
 app.disable('x-powered-by');
+const connectDb = require('./dbconn').connectDB
+connectDb();
 const formidable = require('formidable');
 
 // form parser middleware

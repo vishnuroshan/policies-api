@@ -6,7 +6,7 @@ ex.insertData = ({ path, type }) => {
 	return new Promise((resolve, reject) => {
 		const options = { workerData: { path, type } }
 		let count = 0;
-		const totalWorkers = 2;
+		const totalWorkers = 5;
 		const onMessage = (val) => {
 			++count;
 			if (count >= totalWorkers) return resolve(val);
